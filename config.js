@@ -1,6 +1,6 @@
 exports.TOKEN =
-  "MTA4NzAxMjMzNzA1NzI2Nzc0Mw.Gzi7Cc.-8y4xGTsaMTI9j4q82S7ZrHWJVnIYwyvFcVZHU";
+  "xxxxxxxxxx";
 
-exports.APPLICATION_ID = "1087012337057267743";
+exports.APPLICATION_ID = "xxxxxxx";
 
-exports.GUILD_ID = "379243871747440640";
+exports.GUILD_ID = "xxxxxxx";
