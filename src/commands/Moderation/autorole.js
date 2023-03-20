@@ -9,9 +9,7 @@ const db = new QuickDB();
 module.exports = {
   data: new SlashCommandBuilder()
     .setName("set-autorole")
-    .setDescription(
-      "Cette commande permet de configurer le role qui sera attribué automatiquement aux personnes qui rejoins le serveur"
-    )
+    .setDescription("qaza")
     .addRoleOption((option) =>
       option
         .setName("role")
