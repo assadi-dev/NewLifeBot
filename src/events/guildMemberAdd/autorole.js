@@ -1,6 +1,5 @@
 const { Events } = require("discord.js");
 const fs = require("fs");
-const DATA = require("../../data/autoRole");
 const { QuickDB } = require("quick.db");
 const db = new QuickDB();
 
