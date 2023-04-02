@@ -10,13 +10,13 @@ module.exports = {
   data: new SlashCommandBuilder()
     .setName("set-autorole")
     .setDescription(
-      "Definir le role qui sera attribué automatiquement aux personnes qui rejoins le serveur"
+      "Definir le rôle qui sera attribué automatiquement aux personnes qui rejoins le serveur"
     )
     .addRoleOption((option) =>
       option
         .setName("role")
         .setDescription(
-          "Selectionner le role que vous souhaitez attribuer aux nouveau arrivants"
+          "Selectionner le rôle que vous souhaitez attribuer aux nouveau arrivants"
         )
         .setRequired(true)
     ),
@@ -40,9 +40,9 @@ module.exports = {
     const embed = new EmbedBuilder()
       .setColor("Blue")
       .setDescription(
-        `:white_check_mark: Vous avez defini le role ${role} par defaut ce role sera assigné aux nouveaux venue`
+        `:white_check_mark: Vous avez defini le rôle ${role} par defaut ce rôle sera assigné aux nouveaux venue`
       );
 
-    await interaction.reply({ embeds: [embed] });
+    return await interaction.reply({ embeds: [embed] });
   },
 };
