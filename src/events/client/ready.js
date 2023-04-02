@@ -1,6 +1,6 @@
 const { ActivityType } = require("discord.js");
 
-const status = [{ name: "New Life", type: ActivityType.Playing }];
+const status = [{ name: "Aristonia", type: ActivityType.Playing }];
 
 module.exports = {
   name: "ready",
