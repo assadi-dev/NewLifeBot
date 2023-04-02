@@ -1,3 +1,4 @@
+const { Events } = require("discord.js");
 const fs = require("fs");
 
 module.exports = (client) => {
@@ -23,7 +24,7 @@ module.exports = (client) => {
               );
           }
           break;
-        case "guildMemberAdd":
+        case Events.GuildMemberAdd:
           for (const file of eventsdFiles) {
             const event = require(`../../events/${folder}/${file}`);
             if (event.once)
@@ -35,6 +36,21 @@ module.exports = (client) => {
                 event.execute(...args, client)
               );
           }
+          break;
+
+        case Events.GuildMemberRemove:
+          for (const file of eventsdFiles) {
+            const event = require(`../../events/${folder}/${file}`);
+            if (event.once)
+              client.once(event.name, (...args) =>
+                event.execute(...args, client)
+              );
+            else
+              client.on(event.name, (...args) =>
+                event.execute(...args, client)
+              );
+          }
+
           break;
 
         default:
