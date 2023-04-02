@@ -7,9 +7,10 @@ module.exports = {
   name: Events.GuildMemberAdd,
   once: false,
   async execute(member) {
-    // console.log(`${member.user.id} vient d'arrivé`);
     const role = await db.get(`autorole_${member.guild.id}`);
     const giveRole = await member.guild.roles.cache.get(role);
+
+    if (!role || !giveRole) return;
 
     member.roles.add(giveRole);
   },
